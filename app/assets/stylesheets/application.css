@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+ .form, h5
+{
+    margin: 0px 100px;
+}
+.btn-back, .btn-add
+{
+    margin: 10px 100px;
+}
+.form .label
+{
+    margin: 20px 0px;
+    font-size: 25px;
+}
+.form .btn
+{
+    margin: 30px 0px;
+}
+.table
+{
+    margin: 0px 100px;
+}
+.query_area
+{
+    width: 400px;
+    height: 80px;
+}

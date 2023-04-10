@@ -1,0 +1,17 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |country| %>
+            <tr>
+            <td>
+                <%= country["id"] %>
+            </td>
+            <td>
+                <%= country["name"] %>
+            </td>
+        <% end %>
+    </tbody>
+    </table>

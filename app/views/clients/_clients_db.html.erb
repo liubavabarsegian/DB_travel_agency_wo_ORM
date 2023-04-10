@@ -1,0 +1,30 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Birthday Date</th>
+        <th>Has a member card?</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |client| %>
+            <tr>
+            <td>
+                <%= client["id"] %>
+            </td>
+            <td>
+                <%= client["name"] %>
+            </td>
+            <td>
+                <%= client["phone"] %>
+            </td>
+            <td>
+                <%= client["birthday_date"] %>
+            </td>
+            <td>
+                <%= client["has_member_card"] %>
+            </td>
+            </tr>
+        <% end %>
+    </tbody>
+    </table>

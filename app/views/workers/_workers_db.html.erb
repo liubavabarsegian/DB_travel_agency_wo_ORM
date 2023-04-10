@@ -1,0 +1,30 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Birthday Date</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |worker| %>
+            <tr>
+            <td>
+                <%= worker["id"] %>
+            </td>
+            <td>
+                <%= worker["name"] %>
+            </td>
+            <td>
+                <%= worker["phone"] %>
+            </td>
+            <td>
+                <%= worker["birthday_date"] %>
+            </td>
+            <td>
+                <%= worker["salary"] %>
+            </td>
+            </tr>
+        <% end %>
+    </tbody>
+    </table>

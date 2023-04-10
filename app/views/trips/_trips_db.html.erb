@@ -1,0 +1,38 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Departure date</th>
+        <th>Arrival date</th>
+        <th>Meal</th>
+        <th>Hotel</th>
+        <th>Departure Flight</th>
+        <th>Arrival Flight </th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |trip| %>
+            <tr>
+            <td>
+                <%= trip["id"] %>
+            </td>
+            <td>
+                <%= trip["departure_date"] %>
+            </td>
+            <td>
+                <%= trip["arrival_date"] %>
+            </td>
+            <td>
+                <%= trip["meal"] %>
+            </td>
+            <td>
+                <%= trip["departure_flight_id"] %>
+            </td>
+            <td>
+                <%= trip["arrival_flight_id"] %>
+            </td>
+            <td>
+                <%= trip["hotel_id"] %>
+            </td>
+            </tr>
+        <% end %>
+    </tbody>
+    </table>

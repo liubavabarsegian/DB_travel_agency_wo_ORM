@@ -1,0 +1,38 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Has pool?</th>
+        <th>Number of stars</th>
+        <th>Cleaning included?</th>
+        <th>Price for 1 night for 1 person</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |hotel| %>
+            <tr>
+            <td>
+                <%= hotel["id"] %>
+            </td>
+            <td>
+                <%= hotel["name"] %>
+            </td>
+            <td>
+                <%= hotel["city_id"] %>
+            </td>
+            <td>
+                <%= hotel["has_pool"] %>
+            </td>
+            <td>
+                <%= hotel["number_of_stars"] %>
+            </td>
+            <td>
+                <%= hotel["cleaning_included"] %>
+            </td>
+            <td>
+                <%= hotel["price_for_a_person"] %>
+            </td>
+            </tr>
+        <% end %>
+    </tbody>
+    </table>

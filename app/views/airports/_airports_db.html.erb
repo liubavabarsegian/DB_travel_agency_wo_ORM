@@ -1,0 +1,21 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |airport| %>
+            <tr>
+            <td>
+                <%= airport["id"] %>
+            </td>
+            <td>
+                <%= airport["name"] %>
+            </td>
+            <td>
+                <%= airport["city_id"] %>
+            </td>
+        <% end %>
+    </tbody>
+    </table>

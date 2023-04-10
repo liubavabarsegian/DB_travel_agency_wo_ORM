@@ -1,0 +1,17 @@
+    <table class = "table table-striped">
+    <thead class = "thead-dark">
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <% @records_array.each do |aircompany| %>
+            <tr>
+            <td>
+                <%= aircompany["id"] %>
+            </td>
+            <td>
+                <%= aircompany["name"] %>
+            </td>
+        <% end %>
+    </tbody>
+    </table>
