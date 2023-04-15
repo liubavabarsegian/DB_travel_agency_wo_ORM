@@ -1,7 +1,7 @@
-class HomeController < ApplicationController
-  def schema
-  end
+# frozen_string_literal: true
 
-  def info
-  end
+class HomeController < ApplicationController
+  def schema; end
+
+  def info; end
 end

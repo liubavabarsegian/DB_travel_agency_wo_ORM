@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'home#schema'
   get 'home/info'
@@ -34,7 +36,6 @@ Rails.application.routes.draw do
   post 'flights/add_data'
   post 'trips/add_data'
   post 'orders/add_data'
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
