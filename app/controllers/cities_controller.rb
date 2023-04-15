@@ -9,13 +9,4 @@ class CitiesController < ApplicationController
       @records_array =  ActiveRecord::Base.connection.exec_query(sql)
   end
 
-  def add_data
-  #   (0...100).each do 
-  #       name = Faker::Address.city
-  #       country = Country.ids.sample
-  #       City.create!({name: name, country_id: country})
-  #   end
-
-    redirect_to cities_show_path
-  end
 end

@@ -4,8 +4,6 @@
     <%= f.submit 'Submit', class: 'btn btn-dark' %>
 <% end %>
 
-<%= button_to "Add new data", countries_add_data_path, method: :post, class: "btn btn-dark btn-add"%>
-
 <%= link_to "Back", root_path, class: "btn btn-dark btn-back"%>
 
 <h5>Total rows:  <%= @records_array.count%></h5>
