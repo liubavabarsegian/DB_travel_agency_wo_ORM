@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'insurances/show'
+  get 'insurances/query'
+  get 'tourists/show'
+  get 'tourists/query'
+  get 'people/show'
+  get 'people/query'
   root 'home#schema'
   get 'home/info'
 

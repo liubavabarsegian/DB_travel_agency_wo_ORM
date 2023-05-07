@@ -1,15 +1,18 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Departure Time</th>
-        <th>Aircompany</th>
-        <th>Departure Airport</th>
-        <th>Arrival Airport</th>
+        <th>Departure_Time</th>
+        <th>Aircompany_id</th>
+        <th>Departure_Airport_id</th>
+        <th>Arrival_Airport_id</th>
         <th>Price</th>
-        <th>Meal included?</th>
+        <th>flight_number</th>
+        <th>flight_duration</th>
+        <th>country_from</th>
+        <th>country_where_to</th>
     </thead>
     <tbody>
-        <% @records_array.each do |flight| %>
+        <% @records_array.last(500).each do |flight| %>
             <tr>
             <td>
                 <%= flight["id"] %>
@@ -30,7 +33,16 @@
                 <%= flight["price"] %>
             </td>
             <td>
-                <%= flight["meal_included"] %>
+                <%= flight["flight_number"] %>
+            </td>
+            <td>
+                <%= flight["flight_duration"] %>
+            </td>
+            <td>
+                <%= flight["country_from"] %>
+            </td>
+            <td>
+                <%= flight["country_where_to"] %>
             </td>
         <% end %>
     </tbody>

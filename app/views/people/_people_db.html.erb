@@ -1,9 +1,10 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Person_id</th>
-        <th>Passport</th>
-        <th>Salary</th>
+        <th>full_ame</th>
+        <th>Phone</th>
+        <th>Birthday Date</th>
+        <th>Email</th>
     </thead>
     <tbody>
         <% @records_array.each do |worker| %>
@@ -12,13 +13,16 @@
                 <%= worker["id"] %>
             </td>
             <td>
-                <%= worker["person_id"] %>
+                <%= worker["full_name"] %>
             </td>
             <td>
-                <%= worker["passport"] %>
+                <%= worker["phone"] %>
             </td>
             <td>
-                <%= worker["salary"] %>
+                <%= worker["birthday_date"] %>
+            </td>
+            <td>
+                <%= worker["email"] %>
             </td>
             </tr>
         <% end %>

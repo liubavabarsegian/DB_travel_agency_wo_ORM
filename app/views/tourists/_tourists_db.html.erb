@@ -1,9 +1,10 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Person_id</th>
-        <th>Passport</th>
-        <th>Salary</th>
+        <th>person_id</th>
+        <th>passport</th>
+        <th>foreign_passport</th>
+        <th>has_visa</th>
     </thead>
     <tbody>
         <% @records_array.each do |worker| %>
@@ -18,7 +19,10 @@
                 <%= worker["passport"] %>
             </td>
             <td>
-                <%= worker["salary"] %>
+                <%= worker["foreign_passport"] %>
+            </td>
+            <td>
+                <%= worker["has_visa"] %>
             </td>
             </tr>
         <% end %>

@@ -1,0 +1,14 @@
+<%= form_with url: "query", method: :post, class: "form" do |f| %>
+    <%= f.label "Write your SQL quiery", class: "label" %>
+    <%= f.text_area :select , class: 'form-control query_area'%>
+    <%= f.submit 'Submit', class: 'btn btn-dark' %>
+<% end %>
+
+<%= link_to "Back", root_path, class: "btn btn-dark btn-back"%>
+
+<h5>Total rows:  <%= @records_array.count%></h5>
+
+<div id = "insurances">
+  <%= render "insurances_db" %>
+</div>
+

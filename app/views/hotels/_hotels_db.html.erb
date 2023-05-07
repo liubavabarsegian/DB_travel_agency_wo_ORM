@@ -1,12 +1,25 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Name</th>
-        <th>City</th>
-        <th>Has pool?</th>
-        <th>Number of stars</th>
-        <th>Cleaning included?</th>
-        <th>Price for 1 night for 1 person</th>
+        <th>hotel_name</th>
+        <th>meal_type</th>
+        <th>number_of_pools</th>
+        <th>has_pool_for_children</th>
+        <th>price_for_a_person</th>
+        <th>number_of_stars</th>
+        <th>city_id</th>
+        <th>cleaning_included</th>
+        <th>hotel_address</th>
+        <th>phone</th>
+        <th>web_site</th>
+        <th>discount_percent_for_children</th>
+        <th>has_spa</th>
+        <th>has_own_beach</th>
+        <th>wifi_price_for_a_day</th>
+        <th>has_aquapark</th>
+        <th>coefficient_for_seasons</th>
+        <th>number_of_bars</th>
+        <th>number_of_restaurants</th>
     </thead>
     <tbody>
         <% @records_array.each do |hotel| %>
@@ -15,22 +28,61 @@
                 <%= hotel["id"] %>
             </td>
             <td>
-                <%= hotel["name"] %>
+                <%= hotel["hotel_name"] %>
             </td>
             <td>
-                <%= hotel["city_id"] %>
+                <%= hotel["meal_type"] %>
             </td>
             <td>
-                <%= hotel["has_pool"] %>
+                <%= hotel["number_of_pools"] %>
+            </td>
+            <td>
+                <%= hotel["has_pool_for_children"] %>
+            </td>
+            <td>
+                <%= hotel["price_for_a_person"] %>
             </td>
             <td>
                 <%= hotel["number_of_stars"] %>
             </td>
             <td>
+                <%= hotel["city_id"] %>
+            </td>
+            <td>
                 <%= hotel["cleaning_included"] %>
             </td>
             <td>
-                <%= hotel["price_for_a_person"] %>
+                <%= hotel["hotel_address"] %>
+            </td>
+            <td>
+                <%= hotel["phone"] %>
+            </td>
+            <td>
+                <%= hotel["web_site"] %>
+            </td>
+            <td>
+                <%= hotel["discount_percent_for_children"] %>
+            </td>
+            <td>
+                <%= hotel["has_spa"] %>
+            </td>
+            <td>
+                <%= hotel["has_own_beach"] %>
+            </td>
+            <td>
+                <%= hotel["wifi_price_for_a_day"] %>
+            </td>
+            <td>
+                <%= hotel["has_aquapark"] %>
+            </td>
+            <td>
+                <%= hotel["coefficient_for_seasons"] %>
+            </td>
+            <td>
+                <%= hotel["number_of_bars"] %>
+            </td>
+            <td>
+                <%= hotel["number_of_restaurants"] %>
             </td>
             </tr>
         <% end %>

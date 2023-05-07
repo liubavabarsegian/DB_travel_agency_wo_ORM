@@ -1,10 +1,9 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Birthday Date</th>
-        <th>Has a member card?</th>
+        <th>person_id</th>
+        <th>bonus_points</th>
+        <th>has_client_card</th>
     </thead>
     <tbody>
         <% @records_array.each do |client| %>
@@ -13,16 +12,13 @@
                 <%= client["id"] %>
             </td>
             <td>
-                <%= client["name"] %>
+                <%= client["person_id"] %>
             </td>
             <td>
-                <%= client["phone"] %>
+                <%= client["bonus_points"] %>
             </td>
             <td>
-                <%= client["birthday_date"] %>
-            </td>
-            <td>
-                <%= client["has_member_card"] %>
+                <%= client["has_client_card"] %>
             </td>
             </tr>
         <% end %>

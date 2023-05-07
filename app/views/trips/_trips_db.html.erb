@@ -1,15 +1,23 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Departure date</th>
-        <th>Arrival date</th>
-        <th>Meal</th>
-        <th>Hotel</th>
-        <th>Departure Flight</th>
-        <th>Arrival Flight </th>
+        <th>Departure_date</th>
+        <th>Arrival_date</th>
+        <th>Meal_for_flight</th>
+        <th>Hotel_id</th>
+        <th>Departure_flight_id</th>
+        <th>Arrival_flight_id </th>
+        <th>has_luggage</th>
+        <th>client_id</th>
+        <th>worker_id</th>
+        <th>tourist_id</th>
+        <th>number_of_nights</th>
+        <th>insurance_id</th>
+        <th>trip_price</th>
+        <th>country_id</th>
     </thead>
     <tbody>
-        <% @records_array.each do |trip| %>
+        <% @records_array.last(500).each do |trip| %>
             <tr>
             <td>
                 <%= trip["id"] %>
@@ -21,7 +29,10 @@
                 <%= trip["arrival_date"] %>
             </td>
             <td>
-                <%= trip["meal"] %>
+                <%= trip["meal_for_flight"] %>
+            </td>
+            <td>
+                <%= trip["hotel_id"] %>
             </td>
             <td>
                 <%= trip["departure_flight_id"] %>
@@ -30,7 +41,28 @@
                 <%= trip["arrival_flight_id"] %>
             </td>
             <td>
-                <%= trip["hotel_id"] %>
+                <%= trip["has_luggage"] %>
+            </td>
+            <td>
+                <%= trip["client_id"] %>
+            </td>
+            <td>
+                <%= trip["worker_id"] %>
+            </td>
+            <td>
+                <%= trip["tourist_id"] %>
+            </td>
+            <td>
+                <%= trip["number_of_nights"] %>
+            </td>
+            <td>
+                <%= trip["insurance_id"] %>
+            </td>
+            <td>
+                <%= trip["trip_price"] %>
+            </td>
+            <td>
+                <%= trip["country_id"] %>
             </td>
             </tr>
         <% end %>

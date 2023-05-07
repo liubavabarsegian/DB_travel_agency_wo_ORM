@@ -1,7 +1,12 @@
     <table class = "table table-striped">
     <thead class = "thead-dark">
         <th>Id</th>
-        <th>Name</th>
+        <th>aircompany_name</th>
+        <th>phone</th>
+        <th>office_address</th>
+        <th>discount_percent_for_children</th>
+        <th>luggage_price</th>
+        <th>meal_price</th>
     </thead>
     <tbody>
         <% @records_array.each do |aircompany| %>
@@ -10,7 +15,22 @@
                 <%= aircompany["id"] %>
             </td>
             <td>
-                <%= aircompany["name"] %>
+                <%= aircompany["aircompany_name"] %>
+            </td>
+            <td>
+                <%= aircompany["phone"] %>
+            </td>
+            <td>
+                <%= aircompany["office_address"] %>
+            </td>
+            <td>
+                <%= aircompany["discount_persent_for_children"] %>
+            </td>
+            <td>
+                <%= aircompany["luggage_price"] %>
+            </td>
+            <td>
+                <%= aircompany["meal_price"] %>
             </td>
         <% end %>
     </tbody>

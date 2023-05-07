@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
-class OrdersController < ApplicationController
+class TouristsController < ApplicationController
   def show
-    sql = 'Select * from orders'
+    sql = 'Select * from tourists'
     @records_array = ActiveRecord::Base.connection.exec_query(sql)
   end
 
