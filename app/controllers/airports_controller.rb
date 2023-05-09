@@ -2,7 +2,7 @@
 
 class AirportsController < ApplicationController
   def show
-    sql = 'Select * from airports'
+    sql = 'Select id, name, (select name from cities where city_id = id) as city_id from airports'
     @records_array = ActiveRecord::Base.connection.exec_query(sql)
   end
 

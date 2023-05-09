@@ -2,7 +2,8 @@
 
 class WorkersController < ApplicationController
   def show
-    sql = 'Select * from workers'
+    sql = 'Select id, (select full_name from people
+      where id = person_id) as person_id, salary, passport from workers'
     @records_array = ActiveRecord::Base.connection.exec_query(sql)
   end
 
